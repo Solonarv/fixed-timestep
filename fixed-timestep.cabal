@@ -6,15 +6,15 @@ cabal-version:       2.2
 name:                fixed-timestep
 version:             0.1.0.0
 synopsis:            Pure Haskell library to repeat an action at a specific frequency.
-description:         Repeat (IO) actions at a specific frequency, using
-                     [flicks](https://github.com/OculusVR/Flicks#README) for timekeeping.
+description:         Repeat IO actions at a specific frequency, using
+                     flicks (1/705600000 of a second) for timekeeping.
                      Also contains a simple implementation of flicks.
 homepage:            https://github.com/Solonarv/fixed-timestep#README
 bug-reports:         https://github.com/Solonarv/fixed-timestep/issues
 license:             MIT
 license-file:        LICENSE
 author:              Solonarv
-maintainer:          nstamm@gmx.de
+maintainer:          Nicolas Stamm <nstamm@gmx.de>
 copyright:           2019 Nicolas Stamm (Solonarv)
 category:            Time
 extra-source-files:  CHANGELOG.md
