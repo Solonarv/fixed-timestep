@@ -1,8 +1,5 @@
 -- | Utilities for repeatedly running @'IO'@ actions
 -- at a specific frequency.
-{-# LANGUAGE ViewPatterns #-}
-{-# LANGUAGE GeneralizedNewtypeDeriving #-}
-{-# LANGUAGE DerivingStrategies #-}
 module TimeStep
   ( -- * Repeating actions
     repeatedly
@@ -37,7 +34,7 @@ data TimeStepClock = TimeStepClock
   { tscLastTick :: IORef Flicks
   , tscDesiredTickTime :: Flicks
   , tscClockType :: Clock
-  }
+  } deriving Eq
 
 -- | Run an action repeatedly at the specified frequency.
 -- Uses the 'Monotonic' clock for timing.
@@ -83,4 +80,5 @@ loopUsing (TimeStepClock lastTickRef tickTime clockTy) act = forever $ do
       (ticksToRun, leftover) = elapsed `divMod` tickTime
   replicateM_ (fromIntegral ticksToRun) act
   writeIORef lastTickRef now
-  threadDelayFlicks tickTime
+  now' <- flicksNow clockTy
+  threadDelayFlicks (tickTime + now - now')
