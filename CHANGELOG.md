@@ -1,5 +1,10 @@
 # Revision history for fixed-timestep
 
+## 0.2.0.1 -- 2019-03-25
+
+* Improve docs
+  * Clarify that frequencies are given in units of Hertz.
+
 ## 0.2.0.0 -- 2019-03-25
 
 * Rename `Time.Flick.secnd` to `Time.Flick.oneSecond`
