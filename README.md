@@ -23,7 +23,7 @@ Using `async`, you can repeat multiple actions independently, and also cancel th
 
 ```haskell
 λ> import Data.Time.Clock
-λ> import Control.Concurrent.Asyncx
+λ> import Control.Concurrent.Async
 λ> import Time.Repeatedly
 λ> printer <- asyncRepeatedly 1 (print =<< getCurrentTime)
 2019-03-13 21:21:27.5228834 UTC
