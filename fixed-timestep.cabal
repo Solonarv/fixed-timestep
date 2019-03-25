@@ -4,7 +4,7 @@ cabal-version:       2.2
 -- http://haskell.org/cabal/users-guide/
 
 name:                fixed-timestep
-version:             0.1.0.0
+version:             0.2.0.0
 synopsis:            Pure Haskell library to repeat an action at a specific frequency.
 description:         Repeat IO actions at a specific frequency, using
                      flicks (1/705600000 of a second) for timekeeping.
