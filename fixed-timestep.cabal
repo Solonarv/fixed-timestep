@@ -17,7 +17,7 @@ author:              Solonarv
 maintainer:          Nicolas Stamm <nstamm@gmx.de>
 copyright:           2019 Nicolas Stamm (Solonarv)
 category:            Time
-extra-source-files:  CHANGELOG.md
+extra-source-files:  CHANGELOG.md, README.md
 
 source-repository head
   type:     git
