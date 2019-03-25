@@ -9,7 +9,7 @@ Basic usage:
 
 ```haskell
 λ> import Data.Time.Clock
-λ> import TimeStep
+λ> import Time.Repeatedly
 λ> repeatedly 1 (print =<< getCurrentTime)
 2019-03-13 21:14:36.826248 UTC
 2019-03-13 21:14:37.8282926 UTC
@@ -24,7 +24,7 @@ Using `async`, you can repeat multiple actions independently, and also cancel th
 ```haskell
 λ> import Data.Time.Clock
 λ> import Control.Concurrent.Asyncx
-λ> import TimeStep
+λ> import Time.Repeatedly
 λ> printer <- asyncRepeatedly 1 (print =<< getCurrentTime)
 2019-03-13 21:21:27.5228834 UTC
 2019-03-13 21:21:28.523892 UTC
