@@ -8,7 +8,7 @@
 module Time.Flick
   ( -- * The Flicks data type
     Flicks(..)
-  , flicksPerSecond, secnd
+  , flicksPerSecond, oneSecond
     -- * Conversions
   , approxFlicks
   , periodForFreq
@@ -34,13 +34,13 @@ import System.Clock
 newtype Flicks = Flicks { unFlicks :: Int64 }
   deriving newtype (Eq, Ord, Show, Num, Enum, Integral, Real)
 
--- | How many flicks are in a second. Precisely 705600000.
+-- | How many flicks are in a second: precisely 705600000.
 flicksPerSecond :: Num a => a
 flicksPerSecond = 705600000
 
 -- | One second in flicks.
-secnd :: Flicks
-secnd = flicksPerSecond
+oneSecond :: Flicks
+oneSecond = flicksPerSecond
 
 -- | Convert a number of seconds into flicks, rounding towards zero.
 approxFlicks :: Rational -> Flicks
