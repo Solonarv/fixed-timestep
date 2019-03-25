@@ -4,7 +4,6 @@
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE NamedFieldPuns #-}
 {-# LANGUAGE ScopedTypeVariables #-}
-{-# LANGUAGE TypeApplications #-}
 module Time.Flick
   ( -- * The Flicks data type
     Flicks(..)
@@ -62,7 +61,7 @@ timeSpecToFlicks TimeSpec{sec, nsec} = Flicks (secPart + nsecPart)
 flicksToFixed :: forall r. HasResolution r => Flicks -> Fixed r
 flicksToFixed (Flicks t) = MkFixed val
   where
-    val = fromIntegral t * resolution (Proxy @r) `quot` flicksPerSecond
+    val = fromIntegral t * resolution (Proxy :: Proxy r) `quot` flicksPerSecond
 
 -- | Convert flicks into @'DiffTime'@
 flicksToDiffTime :: Flicks -> DiffTime
