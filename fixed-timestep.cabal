@@ -25,7 +25,7 @@ source-repository head
 
 library
   exposed-modules:     Time.Flick
-                     , TimeStep
+                     , Time.Repeatedly
   -- other-modules:
   other-extensions:    DerivingStrategies GeneralizedNewtypeDeriving NamedFieldPuns
                        ScopedTypeVariables

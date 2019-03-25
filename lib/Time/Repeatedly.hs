@@ -1,6 +1,6 @@
 -- | Utilities for repeatedly running @'IO'@ actions
 -- at a specific frequency.
-module TimeStep
+module Time.Repeatedly
   ( -- * Repeating actions
     repeatedly
   , repeatedly'
